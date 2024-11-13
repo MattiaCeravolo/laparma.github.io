@@ -410,8 +410,8 @@
 
         // Heart and Star Animation Script
         const createOfLogo = () => {
-            const ofLogo = document.createElement('div');
-            ofLogo.classList.add('of-logo');
+            const ofLogo = document.createElement('img');
+            star.classList.add('ofLogo');
             ofLogo.src = 'https://img.icons8.com/?size=100&id=HGaO91S8liC7&format=png&color=000000';  // Inserisci qui l'URL del logo di OnlyFans
             ofLogo.style.width = '15px';
             ofLogo.style.height = '15px';
@@ -427,6 +427,8 @@
                 ofLogo.remove();
             }, 25000);  // Tempo di visualizzazione prima della rimozione
         };
+
+        
         
         const createStar = () => {
             const star = document.createElement('div');
