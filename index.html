@@ -411,8 +411,10 @@
         // Heart and Star Animation Script
         const createOfLogo = () => {
             const ofLogo = document.createElement('img');
-            ofLogo.classList.add('star');
-            ofLogo.src = 'https://img.icons8.com/?size=100&id=HGaO91S8liC7&format=png&color=000000';  // Inserisci qui l'URL del logo di OnlyFans
+            ofLogo.classList.add('https://img.icons8.com/?size=100&id=HGaO91S8liC7&format=png&color=000000');
+            //ofLogo.src = 'https://img.icons8.com/?size=100&id=HGaO91S8liC7&format=png&color=000000';  // Inserisci qui l'URL del logo di OnlyFans
+            ofLogo.style.width = '15px';
+            ofLogo.style.height = '15px';
             const button = document.querySelector('.of-button');
             const buttonRect = button.getBoundingClientRect();
             ofLogo.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
