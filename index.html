@@ -395,7 +395,7 @@
                 if (description) {
                     document.querySelector('#profile p').innerText = description;
                 }
-                if (username) {
+                if (anteprime) {
                     document.getElementById('anteprime-link').setAttribute('href', anteprime);
                 }
                 if (link_vip) {
@@ -409,17 +409,17 @@
 
         // Heart and Star Animation Script
         const createof = () => {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            const button = document.querySelector('.link-button');
+            const of = document.createElement('div');
+            of.classList.add('of');
+            const button = document.querySelector('.of-button');
             const buttonRect = button.getBoundingClientRect();
-            heart.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
-            heart.style.top = buttonRect.top + buttonRect.height + 'px';
-            heart.style.setProperty('--random-dir-x', Math.random());
-            heart.style.setProperty('--random-dir-y', Math.random());
+            of.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
+            of.style.top = buttonRect.top + buttonRect.height + 'px';
+            of.style.setProperty('--random-dir-x', Math.random());
+            of.style.setProperty('--random-dir-y', Math.random());
             document.body.appendChild(heart);
             setTimeout(() => {
-                heart.remove();
+                of.remove();
             }, 25000);
         };
         
@@ -439,7 +439,7 @@
         };
 
         setInterval(createStar, 500);
-        setInterval(createHeart, 500);
+        setInterval(createof, 500);
     </script>
 </body>
 </html>
