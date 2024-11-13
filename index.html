@@ -409,19 +409,32 @@
             .catch(error => console.error('Error loading JSON data:', error));
 
         // Heart and Star Animation Script
-        const createof = () => {
-            const of = document.createElement('div');
-            of.classList.add('of');
+        const createOfLogo = () => {
+            const ofLogo = document.createElement('img');
+            ofLogo.classList.add('of-logo');
+            ofLogo.src = 'URL_DEL_LOGO_OF';  // Inserisci qui l'URL del logo di OnlyFans
+            ofLogo.alt = 'OnlyFans Logo';
+            ofLogo.style.position = 'absolute';
+            ofLogo.style.width = '30px';
+            ofLogo.style.height = '30px';
+            ofLogo.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
             const button = document.querySelector('.of-button');
             const buttonRect = button.getBoundingClientRect();
-            of.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
-            of.style.top = buttonRect.top + buttonRect.height + 'px';
-            of.style.setProperty('--random-dir-x', Math.random());
-            of.style.setProperty('--random-dir-y', Math.random());
-            document.body.appendChild(of);
+            ofLogo.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
+            ofLogo.style.top = buttonRect.top + buttonRect.height + 'px';
+            ofLogo.style.setProperty('--random-dir-x', Math.random());
+            ofLogo.style.setProperty('--random-dir-y', Math.random());
+            
+            document.body.appendChild(ofLogo);
+            
+            // Animazione di rimozione
             setTimeout(() => {
-                of.remove();
-            }, 25000);
+                ofLogo.style.transform = 'scale(1.5)';
+                ofLogo.style.opacity = '0';
+                setTimeout(() => {
+                    ofLogo.remove();
+                }, 1000);
+            }, 2500);  // Tempo di visualizzazione prima della rimozione
         };
         
         const createStar = () => {
@@ -440,7 +453,7 @@
         };
 
         setInterval(createStar, 500);
-        setInterval(createof, 500);
+        setInterval(createOfLogo, 500);
     </script>
 </body>
 </html>
