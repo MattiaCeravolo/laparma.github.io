@@ -155,6 +155,48 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
+        .of-button {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00AFF0; /* Colore principale di OnlyFans */
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: pulse 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .of-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 150%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.5); /* Effetto scorrimento bianco */
+            transform: skewX(-45deg) translateY(-50%);
+            transition: left 1.5s;
+            z-index: -1;
+        }
+        
+        .of-button:hover::before {
+            left: 100%;
+        }
+        
+        .of-button:hover {
+            background: #008DD2; /* Colore hover blu più scuro */
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
         .chat-button {
             position: relative;
             display: inline-block;
@@ -366,7 +408,7 @@
             .catch(error => console.error('Error loading JSON data:', error));
 
         // Heart and Star Animation Script
-        const createHeart = () => {
+        const createof = () => {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             const button = document.querySelector('.link-button');
